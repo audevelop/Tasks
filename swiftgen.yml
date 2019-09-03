@@ -1,0 +1,9 @@
+strings:
+  paths: Tasks/Resources/en.lproj/Localizable.strings
+  templateName: structured-swift4
+  output: Tasks/Generated/SwiftGenRu.swift
+storyboards:
+  paths:
+   - Tasks
+  templateName: swift4
+  output: Tasks/Generated/Storyboards.swift

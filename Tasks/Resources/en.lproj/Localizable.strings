@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Tasks
+
+  Created by Alexey on 14/08/2018.
+  Copyright © 2018 Alexey. All rights reserved.
+*/
+
+Task_Edit.Title.ADD = "ADD";
+Task_Edit.Title.EDIT = "EDIT";
+Task_Edit.DESCRIPTION = "Description";
+TasksError.empty = "Error: fill in the fields";
+TasksError.wrongValue = "Error: wrong value";
+TasksError.outOfValue = "Error: out of value";
+Alert.Title.Error = "Error";

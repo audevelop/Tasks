@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (4.7.1)
+  - GrowingTextView (0.5.0)
+  - IQKeyboardManagerSwift (6.1.1)
+  - PromiseKit (6.2.4):
+    - PromiseKit/CorePromise (= 6.2.4)
+    - PromiseKit/Foundation (= 6.2.4)
+    - PromiseKit/UIKit (= 6.2.4)
+  - PromiseKit/Alamofire (6.2.4):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.2.4)
+  - PromiseKit/Foundation (6.2.4):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.2.4):
+    - PromiseKit/CorePromise
+  - Reusable (4.0.2):
+    - Reusable/Storyboard (= 4.0.2)
+    - Reusable/View (= 4.0.2)
+  - Reusable/Storyboard (4.0.2)
+  - Reusable/View (4.0.2)
+  - SwiftFormat/CLI (0.33.5)
+  - SwiftGen (5.3.0)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+  - ViperMcFlurry (1.5.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - GrowingTextView (= 0.5.0)
+  - IQKeyboardManagerSwift
+  - PromiseKit (~> 6.0)
+  - PromiseKit/Alamofire (~> 6.0)
+  - Reusable
+  - SwiftFormat/CLI
+  - SwiftGen
+  - Swinject (~> 2.6.0)
+  - SwinjectStoryboard (~> 2.2.0)
+  - ViperMcFlurry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - GrowingTextView
+    - IQKeyboardManagerSwift
+    - PromiseKit
+    - Reusable
+    - SwiftFormat
+    - SwiftGen
+    - Swinject
+    - SwinjectStoryboard
+    - ViperMcFlurry
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  GrowingTextView: b99cb33b7ebb30449691d241e970605f5b0f957f
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  PromiseKit: 625b1fc69944fc839503748101c5968cf54b527b
+  Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
+  SwiftFormat: 13fd81206cf4453c19f1a5c51768c8c0d9165c30
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+  ViperMcFlurry: 701bc3ad8d188b1f1e157ec0ddf4e77184de88b5
+
+PODFILE CHECKSUM: 039e6f5a8a4079108d354ad0bc530d47ed430979
+
+COCOAPODS: 1.7.5
