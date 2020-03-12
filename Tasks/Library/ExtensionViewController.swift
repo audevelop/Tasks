@@ -6,18 +6,24 @@
 //  Copyright © 2018 Alexey. All rights reserved.
 //
 
+import RxCocoa
+import RxSwift
 import UIKit
 
 extension UIViewController {
-    func showInformationAlertWith(title: String,
-                                  message: String,
-                                  firstButtonTitle: String? = "ОК",
-                                  andActionForFirstButtonHandler: ((UIAlertAction) -> Void)?,
-                                  secondButtonTitle: String? = nil,
-                                  andSecondAction: ((UIAlertAction) -> Void)? = nil) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
+    private func showInformationAlertWith(
+        title: String,
+        message: String,
+        firstButtonTitle: String? = "ОК",
+        andActionForFirstButtonHandler: ((UIAlertAction) -> Void)?,
+        secondButtonTitle: String? = nil,
+        andSecondAction: ((UIAlertAction) -> Void)? = nil
+    ) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
 
         alert.view.tintColor = .black
 
@@ -39,10 +45,11 @@ extension UIViewController {
     }
 
     func showAlert(withTitle: String, andMessage: String) {
-        showInformationAlertWith(title: withTitle,
-                                 message: andMessage,
-                                 andActionForFirstButtonHandler: nil)
-    }
+        showInformationAlertWith(
+            title: withTitle,
+            message: andMessage,
+            andActionForFirstButtonHandler: nil
+    ) }
 
     func showAlert(withError: Error) {
         showAlert(withTitle: withError.localizedDescription, andMessage: "")
@@ -57,24 +64,32 @@ extension UIAlertController {
     func createMessageAttribString(message: String) {
         let font2 = UIFont.systemFont(ofSize: 14)
 
-        let attribMessage = NSAttributedString(string: message,
-                                               attributes: [.kern: 1.0, NSAttributedString.Key.font: font2])
+        let attribMessage = NSAttributedString(
+            string: message,
+            attributes: [.kern: 1.0, NSAttributedString.Key.font: font2]
+        )
 
-        setValue(attribMessage,
-                 forKey: "attributedMessage")
+        setValue(
+            attribMessage,
+            forKey: "attributedMessage"
+        )
     }
 
     func createTitleAttribString(title: String) {
         let font1 = UIFont.systemFont(ofSize: 15)
 
-        let attribTitle = NSAttributedString(string: title,
-                                             attributes: [.kern: 1.0, NSAttributedString.Key.font: font1])
+        let attribTitle = NSAttributedString(
+            string: title,
+            attributes: [.kern: 1.0, NSAttributedString.Key.font: font1]
+        )
 
-        setValue(attribTitle,
-                 forKey: "attributedTitle")
+        setValue(attribTitle, forKey: "attributedTitle")
     }
 
-    func createFirstAction(firstButtonTitle: String?, andActionForFirstButtonHandler: ((UIAlertAction) -> Void)?) {
+    func createFirstAction(
+        firstButtonTitle: String?,
+        andActionForFirstButtonHandler: ((UIAlertAction) -> Void)?
+    ) {
         var title = "ОК"
         if let bt = firstButtonTitle {
             title = bt
@@ -97,7 +112,10 @@ extension UIAlertController {
         }
     }
 
-    func createSecondAction(secondButtonTitle: String?, andSecondAction: ((UIAlertAction) -> Void)?) {
+    func createSecondAction(
+        secondButtonTitle: String?,
+        andSecondAction: ((UIAlertAction) -> Void)?
+    ) {
         if let secondActionHandler = andSecondAction {
             let action = UIAlertAction(
                 title: secondButtonTitle,
@@ -112,6 +130,14 @@ extension UIAlertController {
                 handler: nil
             )
             addAction(action)
+        }
+    }
+}
+
+extension Reactive where Base: UIViewController {
+    var alertWithTitle: Binder<String> {
+        return Binder(base) { view, message in
+            view.showAlert(withTitle: L10n.Alert.Title.error, andMessage: message)
         }
     }
 }

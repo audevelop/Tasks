@@ -1,44 +1,43 @@
 # Tasks
 
 ## Description
-A test project with list of tasks. v.0.2.  
+A test project with list of tasks (version: 0.5)
 
 ## Functionality
 As a User I can make a task with description, start date, end date.  
 I can edit or delete tasks as well.   
-New task can be saved only with title (if not - alert).
+New task can be saved only with title (if not - localized alert).
 
 # Architecture/Frameworks
-Some sort of MVP (VIPER in Rambler's interpretation without of Interactor, since anyway we need  
-some kind of Router in the project)  
-Interaction between modules (moduleInput, moduleOutput) with: [Rambler's ViperMcFlurry](https://github.com/rambler-digital-solutions/ViperMcFlurry) 
-Configuration module with Swinject Assembly.  
-Network layer with Network Repository + Requests.  
+MVVM + RxSwift.
+Configuration module with EasyDi.
+Network layer.
+Persistence: Realm.
 
-v.0.8 includes RxSwift, ReactiveLists, Realm, EasyDi with MVVM+Router and can be provided by request.  
-
-[Generamba+swifty_viper](https://github.com/rambler-digital-solutions/Generamba)   
-
-[SwiftGen](https://github.com/SwiftGen/SwiftGen) for localization.  
-
-[PromiseKit](https://github.com/mxcl/PromiseKit)  
+[SwiftGen](https://github.com/SwiftGen/SwiftGen) for localization.
 
 [Alamofire](https://github.com/Alamofire/Alamofire)  
 
-[SwinjectStoryboard](https://github.com/Swinject/SwinjectStoryboard)  
+[SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 
-[Reusable](https://github.com/AliSoftware/Reusable)  
+[Reusable](https://github.com/AliSoftware/Reusable)
 
-[SwiftFormat](https://github.com/nicklockwood/SwiftFormat)  
+[GrowingTextView](https://github.com/KennethTsang/GrowingTextView)
 
-[GrowingTextView](https://github.com/KennethTsang/GrowingTextView)  
+[IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)
 
-[IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)  
+[EasyDi](https://github.com/AndreyZarembo/EasyDi)
+
+[RealmSwift]https://github.com/realm/realm-cocoa)
+
+[RxSwift](https://github.com/ReactiveX/RxSwift)
+
+[RxCoca](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)
 
 
 # Server launch
 [JSON-Server](https://github.com/typicode/json-server)  
-*Install JSON Server*  
+*Install JSON Server*
 brew install node (if there is no node.js)  
 npm install -g json-server  
 
@@ -69,8 +68,6 @@ json-server --watch db.json
 
 Now you can launch application  
 
-http://localhost:3000/tasks  
-
-First launch of the App will generate some files, so need to start once more after.
+http://localhost:3000/tasks
 
 

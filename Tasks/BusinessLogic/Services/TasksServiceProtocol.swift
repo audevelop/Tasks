@@ -6,11 +6,18 @@
 //  Copyright © 2018 Alexey. All rights reserved.
 //
 
-import PromiseKit
+import RealmSwift
+import RxSwift
 
 protocol TasksServiceProtocol {
-    func getAll() -> Promise<[Task]>
-    func save(task: Task) -> Promise<Data>
-    func getTask(by taskID: Int) -> Promise<Task>
-    func deleteTask(by taskId: Int) -> Promise<Data>
+    func getAll() -> Single<[Task]>
+    func save(task: Task) -> Completable
+    func getTask(by taskId: Int) -> Single<Task>
+    func deleteTask(by taskId: Int) -> Completable
+    func saveToPerstistence(task: Task)
+    func saveAllToPerstistence(tasks: [Task])
+    func getAllFromPersistence() -> Single<[Task]>
+    func getAllForNotific() -> Results<PersistenceTask>?
+    func deleteAllDataFromPersistence()
+    func deleteTaskFromPersistence(task: Task)
 }

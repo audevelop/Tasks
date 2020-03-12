@@ -6,10 +6,11 @@
   Copyright © 2018 Alexey. All rights reserved.
 */
 
-Task_Edit.Title.ADD = "ADD";
-Task_Edit.Title.EDIT = "EDIT";
-Task_Edit.DESCRIPTION = "Description";
-TasksError.empty = "Error: fill in the fields";
+
+TaskEdit.Title.add    = "ADD";
+TaskEdit.Title.edit   = "EDIT";
+TaskEdit.description  = "Description";
+TasksError.empty      = "Error: fill in the fields";
 TasksError.wrongValue = "Error: wrong value";
 TasksError.outOfValue = "Error: out of value";
-Alert.Title.Error = "Error";
+Alert.Title.error     = "Error";

@@ -6,11 +6,11 @@
   Copyright © 2018 Alexey. All rights reserved.
 */
 
-Task_Edit.Title.ADD = "ДОБАВИТЬ";
-Task_Edit.Title.EDIT = "РЕДАКТИРОВАТЬ";
-Task_Edit.DESCRIPTION = "Описание";
-TasksError.empty = "Ошибка: заполните поля";
+TaskEdit.Title.add    = "ДОБАВИТЬ";
+TaskEdit.Title.edit   = "РЕДАКТИРОВАТЬ";
+TaskEdit.description  = "Описание";
+TasksError.empty      = "Ошибка: заполните поля";
 TasksError.wrongValue = "Ошибка: неверное значение";
 TasksError.outOfValue = "Ошибка: отсутствует значение";
-Alert.Title.Error = "Ошибка";
+Alert.Title.error     = "Ошибка";
 

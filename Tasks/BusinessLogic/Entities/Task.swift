@@ -6,8 +6,9 @@
 //  Copyright © 2018 Alexey. All rights reserved.
 //
 
+// import Swinject
+import EasyDi
 import Foundation
-import Swinject
 import UIKit
 
 struct Task: Codable {
@@ -30,24 +31,5 @@ struct Task: Codable {
         descriptionTask = ""
         startDate = Date()
         endDate = Date()
-    }
-}
-
-extension Task {
-    func dictionary() -> [String: Any]? {
-        let encoder = JSONEncoder()
-        let r = ApplicationAssembly.assembler.resolver as! Container
-        let dateFormatter = r.resolve(DateFormatter.self, name: FormatterType.articleDateFormatter.rawValue)!
-        encoder.dateEncodingStrategy = .formatted(dateFormatter)
-        guard
-            let json = try? encoder.encode(self),
-            let dict = try? JSONSerialization.jsonObject(
-                with: json,
-                options: []
-            ) as? [String: Any]
-        else {
-            return nil
-        }
-        return dict
     }
 }
